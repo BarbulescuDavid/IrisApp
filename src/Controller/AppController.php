@@ -2,19 +2,15 @@
 
 namespace App\Controller;
 
-use App\Service\ColumnIdService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AppController extends AbstractController
 {
     #[Route('/app', name: 'app_app')]
-    public function index(): JsonResponse
+    public function index(): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/AppController.php',
-        ]);
+        return $this->render('index.html.twig');
     }
 }
