@@ -11,5 +11,8 @@ Steps:
  * Open http://127.0.0.1:8000
 
 Debug routes:
- * For integer to string use the followin route /debug/number-to-title/<int>
- * For string to integer use the following route /debug/title-to-number/<string>
+ * For integer to string use the followin route /debug/number-to-title/(int)
+ * For string to integer use the following route /debug/title-to-number/(string)
+
+Future dev:
+ * UI
