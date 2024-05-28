@@ -1,13 +1,17 @@
-<h1>Form with Integer and String Input</h1>
-<form>
-    <label for="integerInput">Integer Input:</label>
-    <input type="text" id="integerInput" >
+{%  extends "base.html.twig" %}
 
-    <br><br>
+{% block body %}
+    <h1>Form with Integer and String Input</h1>
+    <form>
+        <label for="integerInput">Integer Input:</label>
+        <input type="text" id="integerInput" >
 
-    <label for="stringInput">String Input:</label>
-    <input type="text" id="stringInput" >
-</form>
+        <br><br>
+
+        <label for="stringInput">String Input:</label>
+        <input type="text" id="stringInput" >
+    </form>
+{% endblock %}
 
 {% block bottomScripts %}
     <script type="text/javascript">
