@@ -1,10 +1,26 @@
 <h1>Form with Integer and String Input</h1>
 <form>
     <label for="integerInput">Integer Input:</label>
-    <input type="text" id="integerInput" onchange="onIntegerChange(event)">
+    <input type="text" id="integerInput" >
 
     <br><br>
 
     <label for="stringInput">String Input:</label>
-    <input type="text" id="stringInput" onchange="onStringChange(event)">
+    <input type="text" id="stringInput" >
 </form>
+
+{% block bottomScripts %}
+    <script type="text/javascript">
+
+    let integerInput = document.getElementById('integerInput');
+    let stringInput = document.getElementById('stringInput');
+
+    window.onload = function () {
+        console.log('test');
+        integerInput.onblur = function () {
+            stringInput.value = 'A';
+        }
+    }
+
+    </script>
+{% endblock %}
