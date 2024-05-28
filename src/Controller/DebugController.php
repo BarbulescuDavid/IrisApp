@@ -16,7 +16,7 @@ class DebugController extends AbstractController
     public function numberToTitle(ColumnIdService $columnIdService, $id): JsonResponse
     {
         try {
-            if (!is_int($id)) {
+            if (!is_numeric($id)) {
                 throw new Exception('Parameter must be of type int');
             }
             $value = $columnIdService->numberToTitle($id);
